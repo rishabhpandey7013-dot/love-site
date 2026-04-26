@@ -1,35 +1,23 @@
-let timer;
 const btn = document.getElementById("holdBtn");
 
-// MOBILE + PC BOTH SUPPORT
+// simple click / touch pe next page
+btn.addEventListener("click", goNext);
+btn.addEventListener("touchstart", goNext);
 
-btn.addEventListener("mousedown", startHold);
-btn.addEventListener("touchstart", startHold);
-
-btn.addEventListener("mouseup", stopHold);
-btn.addEventListener("mouseleave", stopHold);
-btn.addEventListener("touchend", stopHold);
-
-function startHold() {
-  timer = setTimeout(() => {
-    document.getElementById("title").style.display = "none";
-    document.getElementById("text").style.display = "none";
-    btn.style.display = "none";
-    document.getElementById("options").style.display = "block";
-  }, 3000);
+function goNext() {
+  document.getElementById("title").style.display = "none";
+  document.getElementById("text").style.display = "none";
+  btn.style.display = "none";
+  document.getElementById("options").style.display = "block";
 }
 
-function stopHold() {
-  clearTimeout(timer);
-}
-
-// next page
+// next page (truth → marry)
 function nextPage() {
   document.getElementById("options").style.display = "none";
   document.getElementById("final").style.display = "block";
 }
 
-// hearts animation (same rehne de)
+// hearts animation same
 setInterval(() => {
   let heart = document.createElement("div");
   heart.innerHTML = "💖";
