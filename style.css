@@ -1,1 +1,44 @@
+body {
+  text-align: center;
+  background: linear-gradient(45deg, pink, violet);
+  font-family: Arial;
+  color: white;
+  overflow: hidden;
+}
 
+h1 {
+  margin-top: 100px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+button {
+  padding: 15px 25px;
+  margin: 10px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  background-color: hotpink;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+.heart {
+  position: absolute;
+  color: pink;
+  animation: float 5s linear infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(100vh); }
+  100% { transform: translateY(-10vh); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
