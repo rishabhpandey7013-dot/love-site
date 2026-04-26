@@ -9,7 +9,7 @@
 <h1 id="title">HEY JAANU 💖</h1>
 <p id="text">Touch the button to see the surprise</p>
 
-<button id="holdBtn">Hold Me 💕</button>
+<button id="touchBtn">Touch Me 💕</button>
 
 <div id="options" style="display:none;">
   <h1>TRUTH TEST 💕</h1>
@@ -23,9 +23,13 @@
 <div id="final" style="display:none;">
   <h1>WILL YOU MARRY ME 💍</h1>
 
-  <button class="no">NO</button>
-  <button>YES</button>
-  <button>abhi casually chalne do</button>
+  <button onclick="showLove()">NO</button>
+  <button onclick="showLove()">YES</button>
+  <button onclick="showLove()">abhi casually chalne do</button>
+</div>
+
+<div id="loveMsg" style="display:none;">
+  <h1>I LOVE YOU ❤️</h1>
 </div>
 
 <script src="script.js"></script>
