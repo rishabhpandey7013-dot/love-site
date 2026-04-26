@@ -1,6 +1,6 @@
-const btn = document.getElementById("holdBtn");
+const btn = document.getElementById("touchBtn");
 
-// simple click / touch pe next page
+// touch / click pe next
 btn.addEventListener("click", goNext);
 btn.addEventListener("touchstart", goNext);
 
@@ -11,13 +11,19 @@ function goNext() {
   document.getElementById("options").style.display = "block";
 }
 
-// next page (truth → marry)
+// truth → marry
 function nextPage() {
   document.getElementById("options").style.display = "none";
   document.getElementById("final").style.display = "block";
 }
 
-// hearts animation same
+// final → I LOVE YOU
+function showLove() {
+  document.getElementById("final").style.display = "none";
+  document.getElementById("loveMsg").style.display = "block";
+}
+
+// hearts animation
 setInterval(() => {
   let heart = document.createElement("div");
   heart.innerHTML = "💖";
