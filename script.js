@@ -1,15 +1,16 @@
-const btn = document.getElementById("touchBtn");
+document.addEventListener("DOMContentLoaded", function () {
 
-// touch / click pe next
-btn.addEventListener("click", goNext);
-btn.addEventListener("touchstart", goNext);
+  const btn = document.getElementById("touchBtn");
 
-function goNext() {
-  document.getElementById("title").style.display = "none";
-  document.getElementById("text").style.display = "none";
-  btn.style.display = "none";
-  document.getElementById("options").style.display = "block";
-}
+  // Sirf click use kar (mobile me bhi kaam karega)
+  btn.onclick = function () {
+    document.getElementById("title").style.display = "none";
+    document.getElementById("text").style.display = "none";
+    btn.style.display = "none";
+    document.getElementById("options").style.display = "block";
+  };
+
+});
 
 // truth → marry
 function nextPage() {
